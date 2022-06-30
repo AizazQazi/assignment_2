@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:fluttertoast/fluttertoast.dart";
 
 void main() {
   runApp(
@@ -11,10 +12,21 @@ void main() {
 class Personal extends StatefulWidget {
   const Personal({Key? key}) : super(key: key);
 
+
   @override
   State<Personal> createState() => _PersonalState();
 }
+shw(){
 
+  Fluttertoast.showToast(
+      msg: "Team created!!!",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 2,
+      backgroundColor: Colors.red,
+      textColor: Colors.white,
+      fontSize: 16.0);
+}
 const String name = "Alex";
 const String email = "alex123@gmail.com";
 
@@ -63,7 +75,7 @@ class _PersonalState extends State<Personal> {
             Container(
               width: width,
               height: height * 0.10,
-              child: const ListTile(
+              child:  const ListTile(
                 leading: Icon(
                   Icons.insert_drive_file_outlined,
                   color: Colors.white,
@@ -73,6 +85,7 @@ class _PersonalState extends State<Personal> {
                   style: TextStyle(color: Colors.white),
                 ),
                 trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
+                   onTap:  shw,
               ),
             ),
             Container(
@@ -87,6 +100,7 @@ class _PersonalState extends State<Personal> {
                   'Coupons',
                   style: TextStyle(color: Colors.white),
                 ),
+                onTap:  shw,
                 trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
               ),
             ),
@@ -102,6 +116,7 @@ class _PersonalState extends State<Personal> {
                   'Paymont Method',
                   style: TextStyle(color: Colors.white),
                 ),
+                onTap:  shw,
                 trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
               ),
             ),
@@ -113,6 +128,7 @@ class _PersonalState extends State<Personal> {
                   Icons.call,
                   color: Colors.white,
                 ),
+                onTap:  shw,
                 title: Text(
                   'Call Center',
                   style: TextStyle(color: Colors.white),
@@ -128,6 +144,7 @@ class _PersonalState extends State<Personal> {
                   Icons.settings,
                   color: Colors.white,
                 ),
+                onTap:  shw,
                 title: Text(
                   'Settings',
                   style: TextStyle(color: Colors.white),
@@ -143,6 +160,7 @@ class _PersonalState extends State<Personal> {
                   Icons.gif_box,
                   color: Colors.white,
                 ),
+                onTap:  shw,
                 title: Text(
                   'Tell us what you like',
                   style: TextStyle(color: Colors.white),
@@ -158,6 +176,7 @@ class _PersonalState extends State<Personal> {
                   Icons.logout,
                   color: Colors.white,
                 ),
+                onTap:  shw,
                 title: Text(
                   'Log out',
                   style: TextStyle(color: Colors.white),
