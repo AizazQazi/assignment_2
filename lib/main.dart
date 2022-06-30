@@ -42,8 +42,8 @@ class _PersonalState extends State<Personal> {
           gradient: LinearGradient(
             colors: [Colors.black87, Colors.grey.shade700],
             begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
-            stops: const [0.4, 0.6],
+            end: Alignment.topRight,
+            stops: const [0.4, 0.7],
             tileMode: TileMode.repeated,
           ),
         ),
